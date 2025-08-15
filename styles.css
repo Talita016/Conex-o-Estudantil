@@ -59,11 +59,14 @@ section {
     align-content: center;
 }
 .titulo-inicio {
-    font-size: 2rem; 100px /* ajuste o tamanho aqui */
+    font-size: 2rem; 90px 
     padding: 0.5em 1em;
-    display: inline-block; /* mantém o efeito de "botão" */
-}
-
+    display: inline-block;
+    border-radius: 30px;      
+    background-color: #6b8f71; 
+    color: #ffffff;            
+text-align: center; 
+    text-shadow: -5px 5px #6b8f71;
 
 .display-4 {
     text-shadow: -5px 5px var(--laranja-claro);
