@@ -58,6 +58,12 @@ section {
     height: 3em;
     align-content: center;
 }
+.titulo-inicio {
+    font-size: 2rem; 100px /* ajuste o tamanho aqui */
+    padding: 0.5em 1em;
+    display: inline-block; /* mantém o efeito de "botão" */
+}
+
 
 .display-4 {
     text-shadow: -5px 5px var(--laranja-claro);
