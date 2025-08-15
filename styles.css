@@ -171,3 +171,8 @@ h2 {
         padding: 0.5em 1em;
     }
 }
+.nav-img {
+    height: 50px;
+    width: auto;
+}
+
