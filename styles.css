@@ -3,23 +3,20 @@
 
 :root {
     --laranja-claro: #6b8f71;
-
 }
 
 body {
     font-size: 1rem;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
     background-color: #ffffff;
 }
 
-
 section {
     padding-bottom: 5rem;
 }
-
 
 .nav-link {
     color: #255f3d;
@@ -27,19 +24,17 @@ section {
 }
 
 .inicio-fundo {
-    /* aula 3 */
     background-image: url('img/4965007.jpg');
-    /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: right;
     border-radius: 80px;
     width: 100%;
-    height: 606px;
+    min-height: 606px; /* altura mínima, adaptável */
     padding: 40px;
     margin: 0 auto;
 }
 
-/* posicionamento para a imagem à direita */
+/* imagem à direita (se usar) */
 .img-inicio {
     position: absolute;
     right: 0;
@@ -48,7 +43,6 @@ section {
     height: auto;
 }
 
-
 .esquerda-conteudo {
     display: flex;
     flex-direction: column;
@@ -56,23 +50,18 @@ section {
     gap: 1rem;
 }
 
-
 .botao-inicio {
     background-color: var(--laranja-claro);
     border-radius: 30px;
     border: none;
     width: 14em;
-    /* Convertido para em aumenta o tamanho da fonte por tabela*/
     height: 3em;
-    /* Convertido para em */
     align-content: center;
-
 }
 
 .display-4 {
     text-shadow: -5px 5px var(--laranja-claro);
 }
-
 
 #tropicalia {
     position: relative;
@@ -80,21 +69,16 @@ section {
     margin-top: 3rem;
     margin-bottom: 3rem;
     background: url('img/direita-superior.png') top right no-repeat,
-        url('img/esquerda-inferior.png') bottom left no-repeat;
+                url('img/esquerda-inferior.png') bottom left no-repeat;
     background-size: 180px 180px;
-    /* Ajuste o tamanho conforme necessário */
 }
 
 #tropicalia .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
     z-index: 1;
-    /* Garante que o conteúdo fica acima das imagens do background */
 }
 
-
+/* títulos */
 h2 {
     font-family: 'Lemon', serif;
     font-size: 2.5em;
@@ -104,7 +88,6 @@ h2 {
 
 #galeria {
     background-color: #FAF4F4;
-
 }
 
 .fundo-galeria {
@@ -116,18 +99,13 @@ h2 {
     background-image: url('img/4965007.jpg');
     background-size: cover;
     padding: 4rem 0;
-    /* Espaçamento interno para a seção de contato */
-
 }
 
 .formulario {
     background-color: #ffffff;
     padding: 2rem;
-    /* Espaçamento interno dentro do formulário */
     border-radius: 10px;
-    /* Borda arredondada para o formulário */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Sombra suave para destacar o formulário */
     font-weight: bold;
 }
 
@@ -137,7 +115,59 @@ h2 {
     font-weight: bold;
 }
 
-/* chama classe do bootstrap para modificar a cor */
 .form-control {
     background-color: #F1EDEF;
+}
+
+/* 📱 Responsividade para tablets e celulares */
+@media (max-width: 992px) {
+    #tropicalia .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .inicio-fundo {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .esquerda-conteudo {
+        align-items: center;
+        text-align: center;
+    }
+
+    .img-inicio {
+        position: static;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+        text-shadow: -3px 3px var(--laranja-claro);
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .display-4 {
+        font-size: 1.8rem;
+    }
+
+    .botao-inicio {
+        width: auto;
+        padding: 0.5em 1em;
+    }
 }
