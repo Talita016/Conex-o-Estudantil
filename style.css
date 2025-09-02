@@ -1,109 +1,57 @@
-/* ---------- ESTILO PADRÃO (DESKTOP) ---------- */
-body {
-  margin: 0;
-  font-family: 'Glacial Indifference', sans-serif;
-  background-color: #ebebeb;
-  color: #1e392a;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonte opcional -->
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
 
-/* Cabeçalho fixo */
-header {
-  background-color: #eaf3ea;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
-}
-header .logo {
-  height: 300px;
-}
+  <!-- 🔹 Cabeçalho fixo com logos -->
+  <header>
+    <img src="imagens/logo1.png" alt="Logo 1" class="logo">
+    <img src="imagens/logo2.png" alt="Logo 2" class="logo">
+  </header>
 
-/* Capa fixa */
-.capa {
-  position: relative;
-  width: 80%;
-  height: 60vh;
-  background: url("imagens/4965007.jpg") center/cover no-repeat;
-  margin: 0 auto;
-  border-radius: 20px;
-  overflow: hidden;
-}
-.capa h1 {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Special Elite', cursive;
-  font-size: 3.5rem;
-  color: #fff;
-  padding: 15px 30px;
-  background: rgb(107, 143, 113);
-  border-radius: 15px;
-}
+  <!-- 🔹 Capa principal -->
+  <section class="capa">
+    <h1>Título Centralizado</h1>
 
-/* Decorações fixas */
-.decoracao {
-  position: absolute;
-  width: 120px;
-}
-.esquerda-superior { bottom: -360px; right: -5px; }
-.direita-superior  { top: 10px; right: 10px; width: 150px; }
-.esquerda-inferior { bottom: 10px; left: 10px; }
-.direita-inferior  { bottom: 10px; right: 10px; }
+    <!-- Decorações fixas (uma em cada canto) -->
+    <img src="imagens/decor1.png" alt="Decoração canto inferior esquerdo" class="decoracao esquerda-inferior">
+    <img src="imagens/decor2.png" alt="Decoração canto inferior direito" class="decoracao direita-inferior">
+    <img src="imagens/decor3.png" alt="Decoração canto superior esquerdo" class="decoracao esquerda-superior">
+    <img src="imagens/decor4.png" alt="Decoração canto superior direito" class="decoracao direita-superior">
+  </section>
 
-/* ---------- TABLETS (ATÉ 1024px) ---------- */
-@media (max-width: 1024px) {
-  header .logo {
-    height: 200px;
-  }
-  .capa h1 {
-    font-size: 3rem;
-  }
-  .decoracao {
-    width: 100px;
-  }
-}
+  <!-- 🔹 Acervo -->
+  <section id="acervo">
+    <h2>Nosso Acervo</h2>
+    <div class="jornais">
+      <img src="imagens/jornal1.jpg" alt="Jornal 1">
+      <img src="imagens/jornal2.jpg" alt="Jornal 2">
+      <img src="imagens/jornal3.jpg" alt="Jornal 3">
+      <img src="imagens/jornal4.jpg" alt="Jornal 4">
+    </div>
+  </section>
 
-/* ---------- CELULARES GRANDES (ATÉ 768px) ---------- */
-@media (max-width: 768px) {
-  header {
-    justify-content: center;
-    gap: 15px;
-  }
-  header .logo {
-    height: 120px;
-  }
-  .capa {
-    width: 90%;
-    height: 50vh;
-  }
-  .capa h1 {
-    font-size: 2.2rem;
-  }
-  .decoracao {
-    width: 80px;
-  }
-}
+  <!-- 🔹 Quem somos -->
+  <section id="quem-somos">
+    <h2>Quem Somos</h2>
+    <p>
+      Este espaço é dedicado à preservação da história e da memória cultural. 
+      Reunimos arquivos raros, registros e jornais antigos que contam a trajetória 
+      da nossa cidade e região.
+    </p>
+  </section>
 
-/* ---------- CELULARES PEQUENOS (ATÉ 480px) ---------- */
-@media (max-width: 480px) {
-  header {
-    flex-direction: row; /* mantém logos lado a lado */
-    justify-content: center;
-    gap: 10px;
-  }
-  header .logo {
-    height: 80px;
-  }
-  .capa {
-    width: 95%;
-    height: 40vh;
-  }
-  .capa h1 {
-    font-size: 1.6rem;
-    padding: 10px 15px;
-  }
-  .decoracao {
-    width: 60px;
-  }
-}
+  <!-- 🔹 Rodapé -->
+  <footer>
+    <p>&copy; 2025 - Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
