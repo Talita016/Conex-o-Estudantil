@@ -31,9 +31,7 @@ header .logo {
   justify-content: center;
   border-radius: 20px;
   overflow: hidden;
-
   margin: 0 auto; 
-
 }
 .capa h1 {
   position: absolute;
@@ -51,9 +49,8 @@ header .logo {
   /* fundo arredondado atrás */
   padding: 15px 30px;
   border-radius: 15px;
-  background: rgb(107, 143, 113); /* preto semitransparente */
+  background: rgb(107, 143, 113);
 }
-
 
 /* Decorações */
 .decoracao {
@@ -120,7 +117,7 @@ footer {
 /* Responsividade */
 @media (max-width: 768px) {
   header .logo {
-    height: 60px;
+    height: 120px;
   }
   .capa h1 {
     font-size: 2.5rem;
@@ -132,8 +129,12 @@ footer {
 
 @media (max-width: 480px) {
   header {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row; /* mantém lado a lado */
+    justify-content: center;
+    gap: 10px;
+  }
+  header .logo {
+    height: 80px; /* menor no celular */
   }
   .capa {
     height: 40vh;
