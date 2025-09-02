@@ -1,11 +1,16 @@
+/* ==========================
+   ESTILO GLOBAL
+========================== */
 body {
   margin: 0;
   font-family: 'Glacial Indifference', sans-serif;
-  background-color: #ebebeb;
+  background: linear-gradient(135deg, #eaf3ea 0%, #d4e6d4 100%);
   color: #1e392a;
 }
 
-/* Cabeçalho com logos */
+/* ==========================
+   CABEÇALHO COM LOGOS
+========================== */
 header {
   background-color: #eaf3ea;
   padding: 15px 20px;
@@ -13,60 +18,61 @@ header {
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
+  position: relative;
+  z-index: 3;
 }
 header .logo {
-  height: 300px;
+  height: 200px;
   max-width: 100%;
 }
 
-/* Capa */
+/* ==========================
+   CAPA PRINCIPAL
+========================== */
 .capa {
   position: relative;
   width: 80%;
   min-height: 300px;
   height: 60vh;
   background: url("imagens/4965007.jpg") center/cover no-repeat;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
-  overflow: hidden;
   margin: 0 auto; 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 .capa h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-family: 'Special Elite', cursive;
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: #ffffff;
   text-align: center;
-  text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
-  margin: 0;
-  z-index: 2; /* título por cima */
-
-  /* fundo arredondado atrás */
-  padding: 15px 30px;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+  padding: 20px 35px;
   border-radius: 15px;
-  background: rgb(107, 143, 113);
+  background: rgba(107, 143, 113, 0.8);
 }
 
-/* Decorações */
-.decoracao {
+/* Decoração dentro da capa */
+.decoracao.direita-superior {
   position: absolute;
-  width: 120px;
+  top: 10px;
+  right: 10px;
+  width: 150px;
   opacity: 0.9;
 }
-.esquerda-superior { bottom: 10px; right: 5px; }
-.direita-superior { top: 10px; right: 10px; width: 150px; }
-.esquerda-inferior { bottom: 10px; left: 10px; }
-.direita-inferior { bottom: 10px; right: 10px; }
 
-/* Acervo */
+/* ==========================
+   ACERVO
+========================== */
 #acervo {
   padding: 40px 20px;
   text-align: center;
+  background: #f5f9f5;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 #acervo h2 {
   font-family: 'Special Elite', cursive;
@@ -74,12 +80,13 @@ header .logo {
   font-size: 2rem;
   margin-bottom: 20px;
 }
-#acervo .jornais {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+.jornais {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
-#acervo img {
+.jornais img {
   width: 100%;
   max-width: 300px;
   border-radius: 10px;
@@ -87,11 +94,17 @@ header .logo {
   margin: auto;
 }
 
-/* Quem somos */
+/* ==========================
+   QUEM SOMOS
+========================== */
 #quem-somos {
-  background-color: #dcebdc;
+  background: radial-gradient(circle at top left, #dcebdc, #f1f9f1);
   padding: 40px 20px;
   text-align: center;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 1000px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 #quem-somos h2 {
   font-family: 'Special Elite', cursive;
@@ -105,45 +118,35 @@ header .logo {
   line-height: 1.6;
 }
 
-/* Rodapé */
+/* ==========================
+   RODAPÉ
+========================== */
 footer {
   background-color: #0b3d2e;
   color: #fff;
   text-align: center;
   padding: 15px;
   font-size: 0.9rem;
+  margin-top: 20px;
+  border-radius: 10px 10px 0 0;
 }
 
-/* Responsividade */
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+/* Tablets (max-width: 768px) */
 @media (max-width: 768px) {
-  header .logo {
-    height: 120px;
-  }
-  .capa h1 {
-    font-size: 2.5rem;
-  }
-  .decoracao {
-    width: 90px;
-  }
+  header .logo { height: 150px; }
+  .capa h1 { font-size: 2.4rem; padding: 15px 25px; }
+  .jornais img { max-width: 220px; }
 }
 
+/* Celulares (max-width: 480px) */
 @media (max-width: 480px) {
-  header {
-    flex-direction: row; /* mantém lado a lado */
-    justify-content: center;
-    gap: 10px;
-  }
-  header .logo {
-    height: 80px; /* menor no celular */
-  }
-  .capa {
-    height: 40vh;
-  }
-  .capa h1 {
-    font-size: 1.8rem;
-  }
-  .decoracao {
-    width: 60px;
-    margin: 0 auto;
-  }
+  header { flex-direction: row; justify-content: center; gap: 10px; }
+  header .logo { height: 100px; }
+  .capa { height: 40vh; }
+  .capa h1 { font-size: 1.8rem; padding: 10px 15px; }
+  .jornais img { max-width: 150px; }
 }
