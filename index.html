@@ -3,54 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Site</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Fonte opcional -->
+  <title>Conexão Estudantil</title>
+
+  <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/glacial-indifference-2" rel="stylesheet">
+
+  <!-- Estilo externo -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 🔹 Cabeçalho fixo com logos -->
+  <!-- ==================== CABEÇALHO ==================== -->
   <header>
-    <img src="imagens/logo1.png" alt="Logo 1" class="logo">
-    <img src="imagens/logo2.png" alt="Logo 2" class="logo">
+    <!-- Logos lado a lado -->
+    <img src="imagens/logo.png" alt="Logo Conexão Estudantil" class="logo">
+    <img src="imagens/escola.png" alt="Logo da Escola" class="logo">
   </header>
 
-  <!-- 🔹 Capa principal -->
-  <section class="capa">
-    <h1>Título Centralizado</h1>
+  <!-- ==================== CAPA ==================== -->
+  <div class="capa">
+    <!-- Título central fixo -->
+    <h1>Conexão Estudantil</h1>
 
-    <!-- Decorações fixas (uma em cada canto) -->
-    <img src="imagens/decor1.png" alt="Decoração canto inferior esquerdo" class="decoracao esquerda-inferior">
-    <img src="imagens/decor2.png" alt="Decoração canto inferior direito" class="decoracao direita-inferior">
-    <img src="imagens/decor3.png" alt="Decoração canto superior esquerdo" class="decoracao esquerda-superior">
-    <img src="imagens/decor4.png" alt="Decoração canto superior direito" class="decoracao direita-superior">
-  </section>
+    <!-- Decoração superior direita -->
+    <img src="imagens/direita-superior.png" class="decoracao direita-superior" alt="Decoração canto superior direito">
+  </div>
 
-  <!-- 🔹 Acervo -->
+  <!-- ==================== DECORES FIXAS ==================== -->
+  <!-- Essas imagens ficam fora da capa e são fixadas nos cantos -->
+  <img src="imagens/esquerda-superior.png" class="decoracao esquerda-superior" alt="Decoração canto superior esquerdo">
+  <img src="imagens/esquerda-inferior.png" class="decoracao esquerda-inferior" alt="Decoração canto inferior esquerdo">
+  <img src="imagens/direita-inferior.png" class="decoracao direita-inferior" alt="Decoração canto inferior direito">
+
+  <!-- ==================== ACERVO ==================== -->
   <section id="acervo">
-    <h2>Nosso Acervo</h2>
+    <h2>Acervo</h2>
     <div class="jornais">
-      <img src="imagens/jornal1.jpg" alt="Jornal 1">
-      <img src="imagens/jornal2.jpg" alt="Jornal 2">
-      <img src="imagens/jornal3.jpg" alt="Jornal 3">
-      <img src="imagens/jornal4.jpg" alt="Jornal 4">
+      <a href="imagens/jornal1.jpg" target="_blank">
+        <img src="imagens/jornal1.png" alt="Jornal Semana 1">
+      </a>
+      <a href="imagens/jornal2.png" target="_blank">
+        <img src="imagens/jornal2.png" alt="Jornal Semana 2">
+      </a>
     </div>
   </section>
 
-  <!-- 🔹 Quem somos -->
+  <!-- ==================== QUEM SOMOS ==================== -->
   <section id="quem-somos">
-    <h2>Quem Somos</h2>
+    <h2>Quem somos nós?</h2>
     <p>
-      Este espaço é dedicado à preservação da história e da memória cultural. 
-      Reunimos arquivos raros, registros e jornais antigos que contam a trajetória 
-      da nossa cidade e região.
+      Talita e Samara, alunas da 3ª série do Ensino Médio, que uniram suas ideias e entusiasmo para criar o Conexão Estudantil, um espaço feito por estudantes e para estudantes. Nosso objetivo é manter todos atualizados sobre os acontecimentos semanais da escola, compartilhando notícias, eventos e novidades que fazem parte do nosso dia a dia. <br><br>
+      Além das informações, também queremos trazer um pouco de entretenimento, tornando o site um lugar leve, divertido e que desperte a curiosidade. Aqui, cada clique é uma nova conexão com o que está acontecendo na nossa comunidade escolar.
     </p>
   </section>
 
-  <!-- 🔹 Rodapé -->
+  <!-- ==================== RODAPÉ ==================== -->
   <footer>
-    <p>&copy; 2025 - Todos os direitos reservados.</p>
+    Desenvolvido por Talita dos Santos de Souza e Samara Ferreira Leite. Projeto voluntário, sem fins comerciais.
   </footer>
 
 </body>
