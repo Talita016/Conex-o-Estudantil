@@ -1,4 +1,3 @@
-/* ---------- ESTILO PADRÃO (DESKTOP) ---------- */
 body {
   margin: 0;
   font-family: 'Glacial Indifference', sans-serif;
@@ -6,7 +5,7 @@ body {
   color: #1e392a;
 }
 
-/* Cabeçalho fixo */
+/* Cabeçalho com logos */
 header {
   background-color: #eaf3ea;
   padding: 15px 20px;
@@ -17,93 +16,134 @@ header {
 }
 header .logo {
   height: 300px;
+  max-width: 100%;
 }
 
-/* Capa fixa */
+/* Capa */
 .capa {
   position: relative;
   width: 80%;
+  min-height: 300px;
   height: 60vh;
   background: url("imagens/4965007.jpg") center/cover no-repeat;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 20px;
   overflow: hidden;
+  margin: 0 auto; 
 }
 .capa h1 {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Special Elite', cursive;
   font-size: 3.5rem;
-  color: #fff;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+  margin: 0;
+  z-index: 2; /* título por cima */
+
+  /* fundo arredondado atrás */
   padding: 15px 30px;
-  background: rgb(107, 143, 113);
   border-radius: 15px;
+  background: rgb(107, 143, 113);
 }
 
-/* Decorações fixas */
+/* Decorações */
 .decoracao {
   position: absolute;
   width: 120px;
+  opacity: 0.9;
 }
-.esquerda-superior { bottom: -360px; right: -5px; }
-.direita-superior  { top: 10px; right: 10px; width: 150px; }
+.esquerda-superior { bottom: 10px; right: 5px; }
+.direita-superior { top: 10px; right: 10px; width: 150px; }
 .esquerda-inferior { bottom: 10px; left: 10px; }
-.direita-inferior  { bottom: 10px; right: 10px; }
+.direita-inferior { bottom: 10px; right: 10px; }
 
-/* ---------- TABLETS (ATÉ 1024px) ---------- */
-@media (max-width: 1024px) {
-  header .logo {
-    height: 200px;
-  }
-  .capa h1 {
-    font-size: 3rem;
-  }
-  .decoracao {
-    width: 100px;
-  }
+/* Acervo */
+#acervo {
+  padding: 40px 20px;
+  text-align: center;
+}
+#acervo h2 {
+  font-family: 'Special Elite', cursive;
+  color: #0b3d2e;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+#acervo .jornais {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+#acervo img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin: auto;
 }
 
-/* ---------- CELULARES GRANDES (ATÉ 768px) ---------- */
+/* Quem somos */
+#quem-somos {
+  background-color: #dcebdc;
+  padding: 40px 20px;
+  text-align: center;
+}
+#quem-somos h2 {
+  font-family: 'Special Elite', cursive;
+  font-size: 2rem;
+  color: #0b3d2e;
+}
+#quem-somos p {
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Rodapé */
+footer {
+  background-color: #0b3d2e;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
-  header {
-    justify-content: center;
-    gap: 15px;
-  }
   header .logo {
     height: 120px;
   }
-  .capa {
-    width: 90%;
-    height: 50vh;
-  }
   .capa h1 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   .decoracao {
-    width: 80px;
+    width: 90px;
   }
 }
 
-/* ---------- CELULARES PEQUENOS (ATÉ 480px) ---------- */
 @media (max-width: 480px) {
   header {
-    flex-direction: row; /* mantém logos lado a lado */
+    flex-direction: row; /* mantém lado a lado */
     justify-content: center;
     gap: 10px;
   }
   header .logo {
-    height: 80px;
+    height: 80px; /* menor no celular */
   }
   .capa {
-    width: 95%;
     height: 40vh;
   }
   .capa h1 {
-    font-size: 1.6rem;
-    padding: 10px 15px;
+    font-size: 1.8rem;
   }
   .decoracao {
     width: 60px;
+    margin: 0 auto;
   }
 }
